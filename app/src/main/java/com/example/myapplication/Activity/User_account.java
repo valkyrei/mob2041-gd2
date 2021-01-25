@@ -53,6 +53,9 @@ public class User_account extends AppCompatActivity {
             case R.id.addUser:
                 adduser();
                 return true;
+            case R.id.btnChangePass:
+                repass();
+                return true;
             case R.id.btnLogout:
                 out();
                 return true;
@@ -60,7 +63,11 @@ public class User_account extends AppCompatActivity {
         return super.onOptionsItemSelected(item);
     }
     void adduser(){
-        Intent intent=new Intent(User_account.this, SignUpScreen.class);
+        Intent intent=new Intent(User_account.this, add_User.class);
+        startActivity(intent);
+    }
+    void repass(){
+        Intent intent=new Intent(User_account.this, rePass.class);
         startActivity(intent);
     }
     void out(){
